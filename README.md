@@ -17,6 +17,12 @@ Malware are now more clever than before. Before running, they check whether envi
 But big problem they face, how to get an uinversal way to detect every type of VM ?
 Most common is to search and match values from win32. But this method is static and for a limited versions of VMs. What if there are 1000+ VM manufacturers ? then you would have to write a code to match 1000+ VM signatures. But its time waste. Even after sometime, there would be new other VMs launched and your script would be wasted.
 
+<p><b>Hybrid analysis</b></p>
+<img src=https://www.hybrid-analysis.com/file-inline/6066cafb89aba91a2115c14b/screenshot/screen_1.png width=500 height=300>
+
+<p><b>Any run sandbox</b></p>
+<img src=http://content.any.run/tasks/874cd411-5996-4e93-83d8-fdc72e95215a/download/screens/5827ffa9-9b60-4d40-be97-b8e18afa2ba0/image.jpeg width=500 height=300>
+
 ## Background
 I worked on it for many months. I done many tests upon which I observed that:
 **win32_portconnector** always null and empty on VMs. Please see full report
@@ -89,6 +95,7 @@ It is tested on many environments and is very stable.
 - Detects RDP 
 - Detects Virustotal 
 - Detects [any.run](https://app.any.run/tasks/874cd411-5996-4e93-83d8-fdc72e95215a) 
+- Detects [hybrid-analysis.com](https://www.hybrid-analysis.com/sample/3718df5b2fa478987b2bc5ea2fc260798b5bfa98814125e57b6f2ea4d10117a0/6066cafb89aba91a2115c14b) 
 etc...
 
 
