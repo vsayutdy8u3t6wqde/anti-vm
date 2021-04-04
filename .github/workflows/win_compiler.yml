@@ -1,4 +1,4 @@
-name: Compiler
+name: Windows Compiler
 on: [push]
 
 jobs:
@@ -7,18 +7,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Build
+    - name: Build winexe
       working-directory: ./windows
       run: cmd /c compile.bat
 
-    - name: Upload cs exe
+    - name: Upload winexe
       uses: actions/upload-artifact@v1.0.0
       with:
-       name: win_cs
+       name: win_release
        path: "windows/anti-vm_cs.exe"
-       
-    - name: Upload vb exe
-      uses: actions/upload-artifact@v1.0.0
-      with:
-       name: win_vb
-       path: "windows/anti-vm_vb.exe"   
