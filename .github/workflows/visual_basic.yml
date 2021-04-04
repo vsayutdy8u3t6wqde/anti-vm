@@ -1,0 +1,18 @@
+name: Visual Basic Compiler
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-2019
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Build
+      working-directory: ./windows
+      run: cmd /c compile.bat
+
+    - name: Upload
+      uses: actions/upload-artifact@v1.0.0
+      with:
+       name: win_cs
+       path: "windows/anti-vm_vb.exe"
