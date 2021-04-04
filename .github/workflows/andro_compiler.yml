@@ -18,4 +18,5 @@ jobs:
     #  run: xcopy b4a "" /h /i /c /k /e /r /y  
     #  
     - name: Build APK
+      working-directory: ./android
       run: cmd /c compile.bat "anti_vm.apk"
