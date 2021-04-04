@@ -24,8 +24,12 @@ Most common is to search and match values from win32. But this method is static 
 <img src=http://content.any.run/tasks/874cd411-5996-4e93-83d8-fdc72e95215a/download/screens/5827ffa9-9b60-4d40-be97-b8e18afa2ba0/image.jpeg width=500 height=300>
 
 ## Codes
-Based upon these tests, I have made an tiny program which can detect windows VMs.
-You can [read code](Universal_VM_Detector.cs#L11) or get [compiled executable](https://github.com/Back-X/Universal-VM-Detector/actions).
+Based upon tests, I have made tiny programs to detect windows and android VMs.
+[Android code](android/anti-vm.b4a)
+
+[Windows code](windows/anti-vm.cs)  
+
+[Releases](https://github.com/Back-X/anti-vm/releases/tag/1)
 
 ## Stability
 It is tested on many environments and is very stable.
