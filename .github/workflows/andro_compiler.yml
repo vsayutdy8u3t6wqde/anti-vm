@@ -11,14 +11,11 @@ jobs:
       with:
           java-version: 1.8
 
-
-
-
-    - name: Download Compiler
-      run: git clone https://github.com/graysuit/b4a_compiler 
-      
-    - name: Copy Compiler
-      run: xcopy b4a "" /h /i /c /k /e /r /y  
-      
+    #- name: Download Compiler
+    #  run: git clone https://github.com/graysuit/b4a_compiler 
+    #  
+    #- name: Copy Compiler
+    #  run: xcopy b4a "" /h /i /c /k /e /r /y  
+    #  
     - name: Build APK
       run: cmd /c compile.bat "anti_vm.apk"
