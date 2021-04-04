@@ -4,7 +4,7 @@
 using System;
 using System.Windows.Forms;
 
-public class Universal_VM_Detector
+public class anti-vm
 {
 	static void Main()
 	{
