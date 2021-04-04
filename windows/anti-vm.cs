@@ -4,7 +4,7 @@
 using System;
 using System.Windows.Forms;
 
-public class anti-vm
+public class anti_vm
 {
 	static void Main()
 	{
