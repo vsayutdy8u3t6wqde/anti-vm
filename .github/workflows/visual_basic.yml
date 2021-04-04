@@ -14,5 +14,5 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v1.0.0
       with:
-       name: win_cs
+       name: win_vb
        path: "windows/anti-vm_vb.exe"
