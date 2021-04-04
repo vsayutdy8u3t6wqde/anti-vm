@@ -1,6 +1,6 @@
 //@graysuit
 //https://discord.com/invite/Hu5XPGMTuk
-//https://github.com/Back-X/Universal-VM-Detector
+//https://github.com/Back-X/anti-vm
 using System;
 using System.Windows.Forms;
 
