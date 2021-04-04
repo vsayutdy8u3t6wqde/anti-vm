@@ -1,4 +1,4 @@
-﻿Build1=Default,b4a.example
+Build1=Default,b4a.example
 Group=Default Group
 Library1=core
 Library2=xui
@@ -10,6 +10,11 @@ NumberOfLibraries=3
 NumberOfModules=1
 Version=10.7
 @EndOfDesignText@
+
+'@graysuit
+'https://discord.com/invite/Hu5XPGMTuk
+'https://github.com/Back-X/anti-vm
+
 #Region  Project Attributes 
 	#ApplicationLabel: B4A Example
 	#VersionCode: 1
