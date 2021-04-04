@@ -2,8 +2,8 @@
 
 
  <p align=center>
-<h1 align=center>Universal VM Detector</h1><p align=center>
-Detect every windows virtual machine with just 1 line of code</p>
+<h1 align=center>Anti Virtual Machine</h1><p align=center>
+Detect virtual machines with simplest codes</p>
 <p align=center>  
 <a href=https://discord.gg/Hu5XPGMTuk><img src="https://img.shields.io/discord/787203724975931413?style=for-the-badge&label=discord" /></a>
 <img title="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%99%A5-red?style=for-the-badge" >
@@ -22,66 +22,6 @@ Most common is to search and match values from win32. But this method is static 
 
 <p><b>Any run sandbox</b></p>
 <img src=http://content.any.run/tasks/874cd411-5996-4e93-83d8-fdc72e95215a/download/screens/5827ffa9-9b60-4d40-be97-b8e18afa2ba0/image.jpeg width=500 height=300>
-
-## Background
-I worked on it for many months. I done many tests upon which I observed that:
-**win32_portconnector** always null and empty on VMs. Please see full report
-```
-//asked at: https://stackoverflow.com/q/64846900/14919621
-what **win32_portconnector** is used for ? This question have 3 parts.
-1) What is the use case of **[win32_portconnector][1]** ?                           [1]: https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-portconnector
-2) **Can I get state of ports** using it like Mouse cable, charger, HDMI cables etc ?
-3) Why **VM** have null results on this query :**Get-WmiObject Win32_PortConnector** ?
-```
-**On VM:**
-```ps
-PS C:\Users\Administrator> Get-WmiObject Win32_PortConnector
-``` 
-**On Real environment:**
-```ps
-PS C:\Users\Administrator> Get-WmiObject Win32_PortConnector
-Tag                         : Port Connector 0
-ConnectorType               : {23, 3}
-SerialNumber                :
-ExternalReferenceDesignator :
-PortType                    : 2
-
-Tag                         : Port Connector 1
-ConnectorType               : {21, 2}
-SerialNumber                :
-ExternalReferenceDesignator :
-PortType                    : 9
-
-Tag                         : Port Connector 2
-ConnectorType               : {64}
-SerialNumber                :
-ExternalReferenceDesignator :
-PortType                    : 16
-
-Tag                         : Port Connector 3
-ConnectorType               : {22, 3}
-SerialNumber                :
-ExternalReferenceDesignator :
-PortType                    : 28
-
-Tag                         : Port Connector 4
-ConnectorType               : {54}
-SerialNumber                :
-ExternalReferenceDesignator :
-PortType                    : 17
-
-Tag                         : Port Connector 5
-ConnectorType               : {38}
-SerialNumber                :
-ExternalReferenceDesignator :
-PortType                    : 30
-
-Tag                         : Port Connector 6
-ConnectorType               : {39}
-SerialNumber                :
-ExternalReferenceDesignator :
-PortType                    : 31
-``` 
 
 ## Codes
 Based upon these tests, I have made an tiny program which can detect windows VMs.
