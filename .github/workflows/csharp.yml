@@ -8,7 +8,7 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Build
-      run: cmd.exe /c cd windows & cmd.exe /c C:\Windows\Microsoft.NET\Framework\v2.0.50727\csc.exe -target:winexe anti-vm.cs
+      run: "windows/compile.bat"
 
     - name: Upload
       uses: actions/upload-artifact@v1.0.0
