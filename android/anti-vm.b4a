@@ -1,0 +1,52 @@
+﻿Build1=Default,b4a.example
+Group=Default Group
+Library1=core
+Library2=xui
+Library3=javaobject
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=Starter
+NumberOfFiles=0
+NumberOfLibraries=3
+NumberOfModules=1
+Version=10.7
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	Private Native As JavaObject
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	If FirstTime Then Native.InitializeContext
+
+	Dim IsVM As Boolean = Native.RunMethod("IsVM", Null)
+	If IsVM Then
+		MsgboxAsync("You are using Virtual Environment","IsVM ?")
+	Else
+		MsgboxAsync("You are using Real Environment","IsVM ?")
+	End If
+	
+End Sub
+
+#If JAVA
+public Boolean IsVM() 
+{
+    return android.os.Build.getRadioVersion().trim().length() == 0;
+} 
+#End If
