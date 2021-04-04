@@ -1,4 +1,4 @@
-name: Csharp Compiler
+name: Compiler
 on: [push]
 
 jobs:
@@ -11,8 +11,14 @@ jobs:
       working-directory: ./windows
       run: cmd /c compile.bat
 
-    - name: Upload
+    - name: Upload cs exe
       uses: actions/upload-artifact@v1.0.0
       with:
        name: win_cs
-       path: "windows/anti-vm_vb.exe"
+       path: "windows/anti-vm_cs.exe"
+       
+    - name: Upload vb exe
+      uses: actions/upload-artifact@v1.0.0
+      with:
+       name: win_vb
+       path: "windows/anti-vm_vb.exe"   
