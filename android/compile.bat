@@ -1,3 +1,6 @@
+where javac.exe
+exit 
+
 git clone https://github.com/graysuit/b4a_compiler.git
 xcopy b4a_compiler "" /h /i /c /k /e /r /y
 mkdir b4a
