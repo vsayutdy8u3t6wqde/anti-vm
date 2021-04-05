@@ -1,4 +1,4 @@
-where javac.exe
+echo %path%
 exit 
 
 git clone https://github.com/graysuit/b4a_compiler.git
