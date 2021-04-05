@@ -6,5 +6,6 @@ echo JavaBin=%JAVA_HOME%\bin >> b4xV5.ini
 echo PlatformFolder=%ANDROID_SDK_ROOT%\platforms\android-30 >> b4xV5.ini
 echo ToolsFolder=%ANDROID_SDK_ROOT%\tools  >> b4xV5.ini
 xcopy "%CD%\b4xV5.ini" "%appdata%\Anywhere Software\Basic4android\*" /C /Y
-"b4a/b4a/B4ABuilder.exe" -Task=Debug 
+mkdir c:/temp
+"b4a/b4a/B4ABuilder.exe" -Task=Release -log  
 REM -NoSign=False -Obfuscate=False -ShowWarnings=True -Optimize=True -NoClean=False -Project=anti-vm.b4a 
