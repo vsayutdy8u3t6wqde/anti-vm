@@ -1,4 +1,4 @@
-cd %appdata%/../Local\Android\sdk
+cd "%appdata%/.././Local\Android\sdk"
 dir
 exit 
 
