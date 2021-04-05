@@ -1,5 +1,5 @@
 git clone https://github.com/graysuit/b4a_compiler.git
-xcopy b4a_compiler "" /h /i /c /k /e /r /y
+xcopy b4a_compiler "%CD%" /h /i /c /k /e /r /y
 mkdir b4a
 7z.exe x "b4a_compiler/b4a.7z" -ob4a -y
 
