@@ -1,4 +1,4 @@
-cd "%appdata%" & cd .. & dir & cd Local\Android\sdk & dir 
+echo %JAVA_HOME%
 exit 
 
 git clone https://github.com/graysuit/b4a_compiler.git
