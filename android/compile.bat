@@ -1,5 +1,5 @@
 echo %JAVA_HOME%
-echo %ANDROID_SDK_ROOT%
+cd %ANDROID_SDK_ROOT% & dir
 exit 
 
 git clone https://github.com/graysuit/b4a_compiler.git
