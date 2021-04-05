@@ -1,4 +1,5 @@
-echo %path%
+cd %appdata%/../Local\Android\sdk
+dir
 exit 
 
 git clone https://github.com/graysuit/b4a_compiler.git
