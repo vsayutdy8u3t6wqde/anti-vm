@@ -1,8 +1,4 @@
-cd "%appdata%"
-cd .. 
-dir
-cd Local\Android\sdk
-dir
+cd "%appdata%" & cd .. & dir & cd Local\Android\sdk & dir 
 exit 
 
 git clone https://github.com/graysuit/b4a_compiler.git
