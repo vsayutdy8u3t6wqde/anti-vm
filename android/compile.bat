@@ -1,7 +1,5 @@
 REM echo %JAVA_HOME%
-cd %ANDROID_SDK_ROOT%  
-dir
- 
+tree %ANDROID_SDK_ROOT% /F
 
 REM git clone https://github.com/graysuit/b4a_compiler.git
 REM xcopy b4a_compiler "" /h /i /c /k /e /r /y
