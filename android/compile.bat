@@ -1,3 +1,11 @@
+REM JAVA_HOME
+echo %JAVA_HOME%
+
+REM ANDROID_SDK_ROOT
+echo %ANDROID_SDK_ROOT%
+
+
+
 git clone https://github.com/graysuit/b4a_compiler.git
 xcopy b4a_compiler "%CD%" /h /i /c /k /e /r /y
 mkdir b4a
@@ -6,5 +14,8 @@ echo JavaBin=%JAVA_HOME%\bin >> b4xV5.ini
 echo PlatformFolder=%ANDROID_SDK_ROOT%\platforms\android-30 >> b4xV5.ini
 echo ToolsFolder=%ANDROID_SDK_ROOT%\tools  >> b4xV5.ini
 xcopy "%CD%\b4xV5.ini" "%appdata%\Anywhere Software\Basic4android\*" /C /Y
-"b4a/b4a/B4ABuilder.exe" -Task=build -ShowWarnings=True
+
+type b4xV5.ini
+
+"b4a/b4a/B4ABuilder.exe" -Task=build 
 REM -NoSign=False -Obfuscate=False -ShowWarnings=True -Optimize=True -NoClean=False -Project=anti-vm.b4a 
