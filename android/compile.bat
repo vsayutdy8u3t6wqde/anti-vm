@@ -1,5 +1,5 @@
 REM JAVA_HOME
-echo %JAVA_HOME%
+%JAVA_HOME%\bin\javac.exe -version
 
 REM ANDROID_SDK_ROOT
 echo %ANDROID_SDK_ROOT%
