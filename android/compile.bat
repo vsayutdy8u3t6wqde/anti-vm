@@ -17,5 +17,8 @@ xcopy "%CD%\b4xV5.ini" "%appdata%\Anywhere Software\Basic4android\*" /C /Y
 
 type b4xV5.ini
 
-"b4a/b4a/B4ABuilder.exe" -Task=build 
+mkdir C:\temp
+"b4a/b4a/B4ABuilder.exe" -Task=build -log
+"b4a/b4a/b4a.exe" -log & TIMEOUT 10 & type C:\temp\log.txt
+
 REM -NoSign=False -Obfuscate=False -ShowWarnings=True -Optimize=True -NoClean=False -Project=anti-vm.b4a 
