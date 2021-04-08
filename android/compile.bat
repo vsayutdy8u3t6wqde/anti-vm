@@ -15,6 +15,7 @@ echo PlatformFolder=C:\b4x\sdk\platforms\android-30 >> b4xV5.ini
 echo ToolsFolder=C:\b4x\sdk\tools  >> b4xV5.ini
 xcopy "%CD%\b4xV5.ini" "%appdata%\Anywhere Software\Basic4android\*" /C /Y
 
+mkdir C:\b4x\sdk
 bitsadmin /transfer myDownloadJob /download /priority normal https://dl.google.com/android/repository/commandlinetools-win-6609375_latest.zip C:\b4x\commandlinetools-win-6609375_latest.zip
 bitsadmin /transfer myDownloadJob /download /priority normal https://b4xfiles-4c17.kxcdn.com/b4a/resources_9_20.zip C:\b4x\resources_9_20.zip
 7z.exe x "C:\b4x\commandlinetools-win-6609375_latest.zip" -oC:\b4x\sdk -y
