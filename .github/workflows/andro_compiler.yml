@@ -17,10 +17,14 @@ jobs:
     #- name: Copy Compiler
     #  run: xcopy b4a "" /h /i /c /k /e /r /y  
     #  
-    - name: Build APK
+    - name: Configure 
       working-directory: ./android
       run: cmd /c compile.bat "anti_vm.apk"
       
-    - name: Build APK
+    - name: DIR
       working-directory: ./android
-      run: cmd /c dir & cd b4a & B4ABuilder.exe -Task=build 
+      run: cmd /c dir
+
+    - name: Build
+      working-directory: ./android
+      run: cmd /c B4ABuilder.exe -Task=build 
