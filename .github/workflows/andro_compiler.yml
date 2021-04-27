@@ -22,7 +22,7 @@ jobs:
       run: cmd /c compile.bat "anti_vm.apk"
       
     - name: DIR
-      working-directory: ./android
+      working-directory: ./android/b4a
       run: cmd /c dir
 
     - name: Build
