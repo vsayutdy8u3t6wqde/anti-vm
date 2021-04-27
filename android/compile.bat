@@ -15,11 +15,9 @@ echo PlatformFolder=%ANDROID_SDK_ROOT%\platforms\android-30 >> b4xV5.ini
 echo ToolsFolder=%ANDROID_SDK_ROOT%\tools  >> b4xV5.ini
 xcopy "%CD%\b4xV5.ini" "%appdata%\Anywhere Software\Basic4android\*" /C /Y
 
-type b4xV5.ini
 
-mkdir C:\temp
-"b4a/b4a/B4ABuilder.exe" -Task=build -log
- type C:\temp\log.txt
-"b4a/b4a/b4a.exe" -log & TIMEOUT 10 & type C:\temp\log.txt
+xcopy "anti-vm.b4a" "b4a/b4a\*" /C /Y
+
+REM "b4a/b4a/B4ABuilder.exe" -Task=build 
 
 REM -NoSign=False -Obfuscate=False -ShowWarnings=True -Optimize=True -NoClean=False -Project=anti-vm.b4a 
