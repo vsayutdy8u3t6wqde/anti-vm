@@ -1,3 +1,7 @@
+//@graysuit
+//https://discord.com/invite/Hu5XPGMTuk
+//https://github.com/Back-X/anti-vm
+
 #include "stdafx.h"
 #include <iostream>
 #include <Wbemidl.h>
