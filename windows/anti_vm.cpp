@@ -1,12 +1,9 @@
-// anti_vm.cpp : Defines the entry point for the console application.
-//
-
 #include "stdafx.h"
 #include <iostream>
 #include <Wbemidl.h>
 #pragma comment(lib, "wbemuuid.lib")
 
-
+//credits: https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/Shared/Utils.cpp#L740
 bool InitWMI(IWbemServices **pSvc, IWbemLocator **pLoc, const TCHAR* szNetworkResource)
 {
 	HRESULT hres;
@@ -22,6 +19,8 @@ bool InitWMI(IWbemServices **pSvc, IWbemLocator **pLoc, const TCHAR* szNetworkRe
 	hres = CoSetProxyBlanket(*pSvc, RPC_C_AUTHN_WINNT, RPC_C_AUTHZ_NONE, NULL, RPC_C_AUTHN_LEVEL_CALL, RPC_C_IMP_LEVEL_IMPERSONATE, NULL, EOAC_NONE);
 	return 1;
 }
+
+//credits: https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/Shared/Utils.cpp#L795
 BOOL ExecWMIQuery(IWbemServices **pSvc, IWbemLocator **pLoc, IEnumWbemClassObject **pEnumerator, const TCHAR* szQuery)
 {
 	BSTR strQueryLanguage = SysAllocString(OLESTR("WQL"));
@@ -33,6 +32,7 @@ BOOL ExecWMIQuery(IWbemServices **pSvc, IWbemLocator **pLoc, IEnumWbemClassObjec
 	return bQueryResult;
 }
 
+//credits: https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiVM/Generic.cpp#L1525
 int wmi_query_count(const _TCHAR* query)
 {
     IWbemServices *pSvc = NULL;
@@ -41,20 +41,14 @@ int wmi_query_count(const _TCHAR* query)
     BOOL bStatus = FALSE;
     HRESULT hRes;
     int count = 0;
-
-    // Init WMI
     bStatus = InitWMI(&pSvc, &pLoc, _T("ROOT\\CIMV2"));
     if (bStatus)
     {
-        // If success, execute the desired query
         bStatus = ExecWMIQuery(&pSvc, &pLoc, &pEnumerator, query);
         if (bStatus)
         {
-            // Get the data from the query
             IWbemClassObject *pclsObj = NULL;
             ULONG uReturn = 0;
-
-            // Iterate over our enumator
             while (pEnumerator)
             {
                 hRes = pEnumerator->Next(WBEM_INFINITE, 1, &pclsObj, &uReturn);
@@ -62,10 +56,10 @@ int wmi_query_count(const _TCHAR* query)
                 count++;
                 pclsObj->Release();
             }
-		}
-            pSvc->Release();
-            pLoc->Release();
-            CoUninitialize();        
+	}
+        pSvc->Release();
+        pLoc->Release();
+        CoUninitialize();        
     }
     else return -1;
     return count;
