@@ -42,7 +42,9 @@ It is tested on many environments and is very stable.
 - Detects [any.run](https://app.any.run/tasks/874cd411-5996-4e93-83d8-fdc72e95215a) 
 - Detects [hybrid-analysis.com](https://www.hybrid-analysis.com/sample/3718df5b2fa478987b2bc5ea2fc260798b5bfa98814125e57b6f2ea4d10117a0/6066cafb89aba91a2115c14b) 
 etc...
-
+## Warnings
+- Windows VM detection code can't detect hardware based VM's (like Hyper-V that accelerates in hardware e.g github workflow VPS), nor it supposed to. 
+- Android VM detection code will detect tablet without radio as VM.
 
 ## Contact
 - Facebook: **[gray.programmerz.5](https://fb.com/messages/t/gray.programmerz.5)**
