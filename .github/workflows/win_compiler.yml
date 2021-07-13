@@ -1,6 +1,13 @@
 name: Windows Compiler
-on: [push]
 
+on:
+    push:
+        paths:
+            - 'windows/**'
+    pull_request:
+        paths:
+            - 'windows/**'
+            
 jobs:
   build:
     runs-on: windows-2019

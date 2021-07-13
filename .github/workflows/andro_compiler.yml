@@ -1,30 +1,29 @@
 name: Android Compiler
-on: [pull_request, push]
+
+on:
+  push:
+    paths:
+      - 'android/**'
+  pull_request:
+    paths:
+      - 'android/**'
+    
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2016
     steps:
     - uses: actions/checkout@v2
-     
-    - name: Use Java8
-      uses: actions/setup-java@v1
-      with:
-          java-version: 1.8
 
-    #- name: Download Compiler
-    #  run: git clone https://github.com/graysuit/b4a_compiler 
-    #  
-    #- name: Copy Compiler
-    #  run: xcopy b4a "" /h /i /c /k /e /r /y  
-    #  
-    - name: Configure 
+    - name: Build 
       working-directory: ./android
-      run: cmd /c compile.bat "anti_vm.apk"
-      
-    - name: DIR
-      working-directory: ./android/b4a/b4a
-      run: cmd /c dir
+      run: cmd /c compile.bat 
 
-    - name: Build
-      working-directory: ./android/b4a/b4a
-      run: cmd /c B4ABuilder.exe -Task=build 
+    - name: Sign 
+      working-directory: ./android
+      run: cmd /c sign.bat   
+      
+    - name: Upload androapk
+      uses: actions/upload-artifact@v1.0.0
+      with:
+       name: andro_release
+       path: "android/app/build/outputs/apk/release/anti_vm.apk"
