@@ -5,11 +5,11 @@
 <h1 align=center>Anti Virtual Machine</h1><p align=center>
 Detect virtual machines with simplest codes</p>
 <p align=center>  
-<a href=https://discord.gg/Hu5XPGMTuk><img src="https://img.shields.io/discord/787203724975931413?style=for-the-badge&label=discord" /></a>
+<a href=https://discord.gg/JeBrJNvzuK><img src="https://img.shields.io/discord/787203724975931413?style=for-the-badge&label=discord" /></a>
 <img title="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%99%A5-red?style=for-the-badge" >
-<a href=LICENSE><img src="https://img.shields.io/github/license/Back-X/Universal-VM-Detector?style=for-the-badge" ></a>
-<img src="https://img.shields.io/github/stars/Back-X/Universal-VM-Detector?style=for-the-badge">  
-<img src="https://img.shields.io/github/forks/Back-X/Universal-VM-Detector?style=for-the-badge">
+<a href=LICENSE><img src="https://img.shields.io/github/license/Back-X/anti-vm?style=for-the-badge" ></a>
+<img src="https://img.shields.io/github/stars/Back-X/anti-vm?style=for-the-badge">  
+<img src="https://img.shields.io/github/forks/Back-X/anti-vm?style=for-the-badge">
 </p>  
 
 ## Why we need universal way ?
@@ -50,5 +50,5 @@ etc...
 - Facebook: **[gray.programmerz.5](https://fb.com/messages/t/gray.programmerz.5)**
 - Email: **[hackrefisher@gmail.com](mailto:hackrefisher@gmail.com)**
 - Website: **[tiplava](http://tiplava.blogspot.com)**
-- Discord: **[Fishes](https://discord.gg/Hu5XPGMTuk)**
+- Discord: **[Fishes](https://discord.gg/JeBrJNvzuK)**
 # I Love ALLAH + Holy Prophet + Islam and Pakistan.
