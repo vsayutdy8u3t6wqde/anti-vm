@@ -5,7 +5,7 @@
 <h1 align=center>Anti Virtual Machine</h1><p align=center>
 Detect virtual machines with simplest codes</p>
 <p align=center>  
-<a href=https://discord.gg/JeBrJNvzuK><img src="https://img.shields.io/discord/787203724975931413?style=for-the-badge&label=discord" /></a>
+<a href=graysuit.github.io><img src="https://img.shields.io/discord/873544368982720593?style=for-the-badge&label=discord" /></a>
 <img title="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%99%A5-red?style=for-the-badge" >
 <a href=LICENSE><img src="https://img.shields.io/github/license/Back-X/anti-vm?style=for-the-badge" ></a>
 <img src="https://img.shields.io/github/stars/Back-X/anti-vm?style=for-the-badge">  
@@ -50,5 +50,5 @@ etc...
 - Facebook: **[gray.programmerz.5](https://fb.com/messages/t/gray.programmerz.5)**
 - Email: **[hackrefisher@gmail.com](mailto:hackrefisher@gmail.com)**
 - Website: **[tiplava](http://tiplava.blogspot.com)**
-- Discord: **[Fishes](https://discord.gg/JeBrJNvzuK)**
+- Discord: **[Cody](graysuit.github.io)**
 # I Love ALLAH + Holy Prophet + Islam and Pakistan.
