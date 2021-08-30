@@ -1,3 +1,7 @@
+'@graysuit
+'https://graysuit.github.io
+'https://github.com/Back-X/anti-vm
+
 Dim cables
 cables = GetObject("winmgmts:").InstancesOf("Win32_PortConnector").Count
 If cables = 0 Then
