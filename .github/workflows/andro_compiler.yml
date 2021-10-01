@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build 
-      working-directory: ./android
+      working-directory: android
       run: cmd /c compile.bat 
 
     - name: Sign 
