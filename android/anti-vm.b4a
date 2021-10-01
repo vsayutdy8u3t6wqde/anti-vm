@@ -15,7 +15,7 @@ Version=10.7
 'https://github.com/Back-X/anti-vm
 
 #Region  Project Attributes 
-	#ApplicationLabel: B4A Example
+	#ApplicationLabel: B4A Exampl
 	#VersionCode: 1
 	#VersionName: 
 	'SupportedOrientations possible values: unspecified, landscape or portrait.
